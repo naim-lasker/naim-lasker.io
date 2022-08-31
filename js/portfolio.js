@@ -12,7 +12,7 @@
 
 ******************************/
 
-jQuery(function($) {
+(function($) {
   "use strict";
 
   /* 
