@@ -17,15 +17,15 @@ $(document).ready(function() {
 
   /* 
 
-	1. Vars and Inits
+	1. Lets and Inits
 
 	*/
 
-  var header = $(".header");
-  var menu = $(".menu");
-  var burger = $(".hamburger");
-  var menuActive = false;
-  var map;
+  let header = $(".header");
+  let menu = $(".menu");
+  let burger = $(".hamburger");
+  let menuActive = false;
+  let map;
 
   setHeader();
 
@@ -100,8 +100,8 @@ $(document).ready(function() {
 	*/
 
   function initGoogleMap() {
-    var myLatlng = new google.maps.LatLng(23.78, 90.42);
-    var mapOptions = {
+    const myLatlng = new google.maps.LatLng(23.78, 90.42);
+    const mapOptions = {
       center: myLatlng,
       zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
