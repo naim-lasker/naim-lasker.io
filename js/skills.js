@@ -13,7 +13,7 @@
 
 ******************************/
 
-$(document).ready(function()
+$j(document).ready(function()
 {
 	"use strict";
 
@@ -23,15 +23,15 @@ $(document).ready(function()
 
 	*/
 
-	var header = $('.header');
-	var menu = $('.menu');
-	var burger = $('.hamburger');
+	var header = $j('.header');
+	var menu = $j('.menu');
+	var burger = $j('.hamburger');
 	var menuActive = false;
 	var ctrl = new ScrollMagic.Controller();
 
 	setHeader();
 
-	$(window).on('resize', function()
+	$j(window).on('resize', function()
 	{
 		setHeader();
 
@@ -44,11 +44,11 @@ $(document).ready(function()
 		}
 		setTimeout(function()
 		{
-			jQuery(".main_content_scroll").mCustomScrollbar("update");
+			$j(".main_content_scroll").mCustomScrollbar("update");
 		}, 375);
 	});
 
-	$(document).on('scroll', function()
+	$j(document).on('scroll', function()
 	{
 		setHeader();
 	});
@@ -65,7 +65,7 @@ $(document).ready(function()
 
 	function setHeader()
 	{
-		if($(window).scrollTop() > 91)
+		if($j(window).scrollTop() > 91)
 		{
 			header.addClass('scrolled');
 		}
@@ -83,9 +83,9 @@ $(document).ready(function()
 
 	function initMenu()
 	{
-		if($('.hamburger').length && $('.menu').length)
+		if($j('.hamburger').length && $j('.menu').length)
 		{
-			var hamb = $('.hamburger');
+			var hamb = $j('.hamburger');
 
 			hamb.on('click', function()
 			{
@@ -121,15 +121,15 @@ $(document).ready(function()
 
 	function initProgressBars()
 	{
-		if($('.skill_bars').length)
+		if($j('.skill_bars').length)
 		{
-			var eles = $('.skill_bars');
+			var eles = $j('.skill_bars');
 			var gradNum = 0;
 
 			eles.each(function(i)
 			{
 
-				var ele = $(this);
+				var ele = $j(this);
 	    		var elePerc = ele.data('perc');
 	    		var eleName = '#'+ele.data('name');
 	    		var eleColorStart = ele.data('color-start');
@@ -185,13 +185,13 @@ $(document).ready(function()
 
 	function initMilestones()
 	{
-		if($('.milestone_counter').length)
+		if($j('.milestone_counter').length)
 		{
-			var milestoneItems = $('.milestone_counter');
+			var milestoneItems = $j('.milestone_counter');
 
 	    	milestoneItems.each(function(i)
 	    	{
-	    		var ele = $(this);
+	    		var ele = $j(this);
 	    		var endValue = ele.data('end-value');
 	    		var eleValue = ele.text();
 

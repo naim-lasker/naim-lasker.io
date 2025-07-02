@@ -12,7 +12,7 @@
 
 ******************************/
 
-$(document).ready(function() {
+$j(document).ready(function() {
   "use strict";
 
   /* 
@@ -21,15 +21,15 @@ $(document).ready(function() {
 
 	*/
 
-  let header = $(".header");
-  let menu = $(".menu");
-  let burger = $(".hamburger");
+  let header = $j(".header");
+  let menu = $j(".menu");
+  let burger = $j(".hamburger");
   let menuActive = false;
   let map;
 
   setHeader();
 
-  $(window).on("resize", function() {
+  $j(window).on("resize", function() {
     setHeader();
 
     if (window.innerWidth > 1280) {
@@ -38,11 +38,11 @@ $(document).ready(function() {
       }
     }
     setTimeout(function() {
-      jQuery(".main_content_scroll").mCustomScrollbar("update");
+      $j(".main_content_scroll").mCustomScrollbar("update");
     }, 375);
   });
 
-  $(document).on("scroll", function() {
+  $j(document).on("scroll", function() {
     setHeader();
   });
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	*/
 
   function setHeader() {
-    if ($(window).scrollTop() > 91) {
+    if ($j(window).scrollTop() > 91) {
       header.addClass("scrolled");
     } else {
       header.removeClass("scrolled");
@@ -70,8 +70,8 @@ $(document).ready(function() {
 	*/
 
   function initMenu() {
-    if ($(".hamburger").length && $(".menu").length) {
-      var hamb = $(".hamburger");
+    if ($j(".hamburger").length && $j(".menu").length) {
+      var hamb = $j(".hamburger");
 
       hamb.on("click", function() {
         if (!menuActive) {

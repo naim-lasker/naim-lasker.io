@@ -290,6 +290,13 @@
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	// Prevent jQuery conflicts while preserving for plugins
+	var $j = jQuery.noConflict();
+	// Restore jQuery for plugins that need it
+	window.jQuery = $j;
+	window.$ = $j;
+</script>
 <script src="styles/bootstrap-4.1.2/popper.js"></script>
 <script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
 <script src="plugins/greensock/TweenMax.min.js"></script>

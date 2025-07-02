@@ -37,7 +37,7 @@
       }
     }
     setTimeout(function() {
-      jQuery(".main_content_scroll").mCustomScrollbar("update");
+      $j(".main_content_scroll").mCustomScrollbar("update");
     }, 375);
   });
 
@@ -130,4 +130,4 @@
       }
     }
   }
-})(jQuery);
+})($j);

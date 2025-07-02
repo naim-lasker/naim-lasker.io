@@ -154,7 +154,7 @@
 									class="portfolio_item_content d-flex flex-column align-items-center justify-content-center">
 									<div class="portfolio_item_title">FundedNext</div>
 									<div class="portfolio_item_link">
-										<a href="hhttps://fundednext.com/" target="_blank">See Details</a>
+										<a href="https://fundednext.com/" target="_blank">See Details</a>
 									</div>
 								</div>
 							</div>
@@ -452,6 +452,13 @@
 	</div>
 
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+		// Prevent jQuery conflicts while preserving for plugins
+		var $j = jQuery.noConflict();
+		// Restore jQuery for plugins that need it
+		window.jQuery = $j;
+		window.$ = $j;
+	</script>
 	<script src="styles/bootstrap-4.1.2/popper.js"></script>
 	<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
 	<script src="plugins/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
